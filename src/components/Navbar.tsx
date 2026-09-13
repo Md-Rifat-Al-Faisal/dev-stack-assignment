@@ -79,14 +79,14 @@ function Navbar() {
         <div className="flex items-center gap-2 justify-self-end sm:gap-5">
           <button
             type="button"
-            className="min-h-11 whitespace-nowrap text-xs font-medium text-slate-600 hover:text-pink-600 sm:text-sm"
+            className="min-h-11 cursor-pointer whitespace-nowrap text-xs font-medium text-slate-600 hover:text-pink-600 sm:text-sm"
           >
             Sign In
           </button>
 
           <button
             type="button"
-            className="min-h-11 whitespace-nowrap rounded-full bg-[#C0337C] px-4 text-xs font-medium text-white shadow-sm hover:opacity-90 sm:px-6 sm:text-sm"
+            className="min-h-11 cursor-pointer whitespace-nowrap rounded-full bg-[#C0337C] px-6 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
           >
             Sign Up
           </button>

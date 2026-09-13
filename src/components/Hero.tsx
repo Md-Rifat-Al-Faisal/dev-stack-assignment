@@ -16,10 +16,10 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
-          <button className="brand-gradient w-full rounded-full px-8 py-3.5 font-semibold text-white shadow-sm transition-opacity hover:opacity-90 sm:w-auto">
+          <button className="brand-gradient w-full cursor-pointer rounded-full px-8 py-3.5 font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md sm:w-auto">
             Explore Technologies
           </button>
-          <button className="w-full rounded-full border-2 border-slate-200 bg-white px-8 py-3.5 font-semibold text-slate-700 transition-colors hover:bg-slate-50 sm:w-auto">
+          <button className="w-full cursor-pointer rounded-full border-2 border-slate-200 bg-white px-8 py-3.5 font-semibold text-slate-700 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-md sm:w-auto">
             Learn More
           </button>
         </div>

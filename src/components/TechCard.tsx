@@ -54,10 +54,10 @@ const TechCard = ({ tech, isAdded, onAdd }: TechCardProps) => {
       <button 
         onClick={() => onAdd(tech)}
         disabled={isAdded}
-        className={`mt-5 w-full rounded-xl py-3 text-sm font-semibold transition-all ${
+        className={`mt-5 w-full rounded-xl py-3 text-sm font-semibold transition-all duration-200 ${
           isAdded 
-            ? 'bg-transparent text-[#C0337C] cursor-not-allowed' 
-            : 'bg-[#0f1117] text-white hover:opacity-90'
+            ? 'cursor-not-allowed bg-transparent text-[#C0337C]' 
+            : 'cursor-pointer bg-[#0f1117] text-white hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md'
         }`}
       >
         {isAdded ? '✓ Added to Stack' : 'Add to Stack'}

@@ -38,7 +38,7 @@ const Sidebar = ({ stack, onRemove, onRemoveAll }: SidebarProps) => {
                 </div>
                 <button 
                   onClick={() => onRemove(tech.id)}
-                  className="text-slate-400 transition-colors hover:text-slate-700"
+                  className="cursor-pointer text-slate-400 transition-colors hover:text-slate-700"
                   aria-label={`Remove ${tech.name}`}
                 >
                   <FiX size={20} />
@@ -49,7 +49,7 @@ const Sidebar = ({ stack, onRemove, onRemoveAll }: SidebarProps) => {
 
           <button 
             onClick={onRemoveAll}
-            className="w-full rounded-xl border border-red-200 bg-white py-3 text-sm font-semibold text-red-500 transition-colors hover:bg-red-50"
+            className="w-full cursor-pointer rounded-xl border border-red-200 bg-white py-3 text-sm font-semibold text-red-500 transition-all duration-200 hover:-translate-y-0.5 hover:bg-red-50 hover:shadow-sm"
           >
             Remove All
           </button>

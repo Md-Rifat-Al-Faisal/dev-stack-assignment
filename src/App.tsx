@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import MainLayout from './components/MainLayout'
 import type { Technology } from './types'
+import Footer from './components/Footer'
 
 function App() {
   const [technologies, setTechnologies] = useState<Technology[]>([])
@@ -47,7 +48,7 @@ function App() {
   }
 
   return (
-    <div id="home" className="min-h-screen bg-white pb-24">
+    <div id="home" className="min-h-screen bg-white">
       <Navbar />
       <Hero />
       <MainLayout 
@@ -58,6 +59,7 @@ function App() {
         onRemove={handleRemoveFromStack}
         onRemoveAll={handleRemoveAll}
       />
+      <Footer />
       <ToastContainer position="bottom-right" autoClose={3000} />
     </div>
   )
