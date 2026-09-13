@@ -55,7 +55,7 @@ function Navbar() {
           </div>
 
           <span className="hidden text-xl font-extrabold text-slate-900 sm:inline">
-            Dev<span className="font-medium text-[#C13584]">Stack</span>
+                        Dev<span className="font-medium text-brand-gradient">Stack</span>
           </span>
         </a>
 
@@ -86,7 +86,7 @@ function Navbar() {
 
           <button
             type="button"
-            className="min-h-11 cursor-pointer whitespace-nowrap rounded-full bg-[#C0337C] px-6 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
+                        className="brand-gradient min-h-11 cursor-pointer whitespace-nowrap rounded-full px-6 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
           >
             Sign Up
           </button>

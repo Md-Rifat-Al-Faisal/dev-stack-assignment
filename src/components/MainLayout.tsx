@@ -16,7 +16,7 @@ const MainLayout = ({ technologies, loading, stack, onAdd, onRemove, onRemoveAll
     <main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" id="technologies">
       <div className="mb-10 text-center lg:text-left">
         <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-slate-900">
-          Explore the <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">Technologies</span>
+                    Explore the <span className="text-brand-gradient">Technologies</span>
         </h2>
         <p className="text-lg text-slate-600">
           Pick one technology per category to build your ideal stack.
