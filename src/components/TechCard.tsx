@@ -19,7 +19,12 @@ const getBadgeStyles = (badge?: string) => {
 
 const TechCard = ({ tech, isAdded, onAdd }: TechCardProps) => {
   return (
-    <div className="flex h-full flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+    <div className={`flex h-full flex-col rounded-2xl p-6 shadow-sm transition-all ${
+      isAdded 
+        ? 'border-2 border-[#C0337C] bg-pink-50/30' 
+        : 'border border-slate-100 bg-white'
+    }`}>
+      
       <div className="flex items-start justify-between">
         <img src={tech.icon} alt={tech.name} className="h-12 w-12 object-contain" />
         {tech.badge && (
@@ -34,7 +39,6 @@ const TechCard = ({ tech, isAdded, onAdd }: TechCardProps) => {
       
       <hr className="my-4 border-slate-100" />
       
-      {/* whitespace-nowrap prevents "Beginner-Friendly" from splitting */}
       <div className="flex items-center justify-between text-[13px]">
         <span className="whitespace-nowrap rounded-lg bg-slate-50 px-2 py-1 font-medium text-slate-600">
           {tech.category}
@@ -52,12 +56,13 @@ const TechCard = ({ tech, isAdded, onAdd }: TechCardProps) => {
         disabled={isAdded}
         className={`mt-5 w-full rounded-xl py-3 text-sm font-semibold transition-all ${
           isAdded 
-            ? 'bg-slate-100 text-slate-400 cursor-not-allowed' 
+            ? 'bg-transparent text-[#C0337C] cursor-not-allowed' 
             : 'bg-[#0f1117] text-white hover:opacity-90'
         }`}
       >
         {isAdded ? '✓ Added to Stack' : 'Add to Stack'}
       </button>
+      
     </div>
   )
 }

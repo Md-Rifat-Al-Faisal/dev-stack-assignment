@@ -9,28 +9,31 @@ interface SidebarProps {
 
 const Sidebar = ({ stack, onRemove, onRemoveAll }: SidebarProps) => {
   return (
-    <aside className="sticky top-24 flex flex-col rounded-[32px] bg-slate-50 p-8 shadow-sm">
-      <h2 className="text-3xl font-extrabold text-slate-900 mb-6">Your<br/>Stack</h2>
+    <aside className="sticky top-24 flex flex-col rounded-[24px] border border-slate-100 bg-white p-6 shadow-sm">
+      <h2 className="text-2xl font-bold text-slate-900">Your Stack</h2>
       
       {stack.length === 0 ? (
-        <p className="text-[15px] leading-relaxed text-slate-500">
-          You haven't added any technologies yet. Click "Add to Stack" on a card above to start building!
-        </p>
+        <>
+          <p className="mb-6 mt-1 text-sm text-slate-400">No technologies selected yet.</p>
+          <div className="flex items-center justify-center rounded-2xl border-2 border-dashed border-slate-200 py-10">
+            <span className="text-sm font-medium text-slate-400">Your stack is empty.</span>
+          </div>
+        </>
       ) : (
         <>
-          <p className="mb-4 text-sm font-medium text-slate-500">{stack.length} Technology Selected</p>
+          <p className="mb-6 mt-1 text-sm text-slate-400">{stack.length} Technology Selected</p>
           
           <div className="mb-6 flex flex-col gap-3">
             {stack.map((tech) => (
               <div 
                 key={tech.id} 
-                className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 shadow-sm"
+                className="flex items-center justify-between rounded-xl border border-slate-100 bg-white p-3 shadow-sm"
               >
                 <div className="flex items-center gap-3">
-                  <img src={tech.icon} alt={tech.name} className="h-6 w-6 object-contain" />
+                  <img src={tech.icon} alt={tech.name} className="h-8 w-8 object-contain" />
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-slate-900">{tech.name}</span>
-                    <span className="text-[10px] font-medium text-slate-400">{tech.category}</span>
+                    <span className="text-[11px] font-medium text-slate-400">{tech.category}</span>
                   </div>
                 </div>
                 <button 
