@@ -40,7 +40,7 @@ const MainLayout = ({ technologies, loading, stack, onAdd, onRemove, onRemoveAll
         </div>
 
         {/* Right Side: Sidebar (1 column on desktop) */}
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 lg:sticky lg:top-24">
           <Sidebar stack={stack} onRemove={onRemove} onRemoveAll={onRemoveAll} />
         </div>
       </div>

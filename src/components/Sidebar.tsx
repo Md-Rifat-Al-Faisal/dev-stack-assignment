@@ -9,7 +9,7 @@ interface SidebarProps {
 
 const Sidebar = ({ stack, onRemove, onRemoveAll }: SidebarProps) => {
   return (
-    <aside className="sticky top-24 flex flex-col rounded-[24px] border border-slate-100 bg-white p-6 shadow-sm">
+    <aside className="flex flex-col rounded-[24px] border border-slate-100 bg-white p-6 shadow-sm">
       <h2 className="text-2xl font-bold text-slate-900">Your Stack</h2>
       
       {stack.length === 0 ? (
